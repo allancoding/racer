@@ -43,7 +43,7 @@ Class(function LobbyView(_data) {
     function initText() {
         $text = $('.text');
         $text.fontStyle('AvantGarde', 12, '#fff');
-        $text.css({ opacity: 0, width: 300, height: 30, paddingTop: 2, overflow: 'visible', whiteSpace: 'nowrap', webkitBackfaceVisibility: 'hidden', textAlign: 'left', position: 'relative', margin: '2px auto 0 auto' });
+        $text.css({ opacity: 0, width: 300, height: 100, paddingTop: 2, overflow: 'visible', whiteSpace: 'nowrap', webkitBackfaceVisibility: 'hidden', textAlign: 'left', position: 'relative', margin: '2px auto 0 auto' });
         $text.text('FRIENDS CAN JOIN AT<br><strong>'+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong><br/>BY ENTERING THIS RACE CODE:');
         $text.invisible();
         $this.addChild($text);
@@ -51,7 +51,7 @@ Class(function LobbyView(_data) {
         if (RacerDevice.mobile) {
             $select = $('.select');
             $select.fontStyle('AvantGarde', 12, '#fff');
-            $select.css({ opacity: 0, width: 300, height: 30, top: 0, paddingTop: 2, overflow: 'visible', whiteSpace: 'nowrap', webkitBackfaceVisibility: 'hidden', textAlign: 'left' });
+            $select.css({ opacity: 0, width: 300, height: -30, top: 0, paddingTop: 2, overflow: 'visible', whiteSpace: 'nowrap', webkitBackfaceVisibility: 'hidden', textAlign: 'left' });
             $select.text('<br/>SELECT A TRACK');
             $select.invisible();
             $this.addChild($select);    

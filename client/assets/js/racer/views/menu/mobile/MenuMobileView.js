@@ -30,7 +30,7 @@ Class(function MenuMobileView() {
     function initButtons() {
         $text = $('.text');
         $text.fontStyle('AvantGarde', 15, '#fff');
-        $text.css({ fontWeight: 'bold', width: '100%', textAlign: 'left', whiteSpace: 'nowrap', letterSpacing: '1px', lineHeight: 22, top: '50%', marginTop: -50 });
+        $text.css({ fontWeight: 'bold', width: '100%', textAlign: 'left', whiteSpace: 'nowrap', letterSpacing: '1px', lineHeight: 22, top: '49%', marginTop: -50 });
         $text.text('GET READY TO RACE AND TELL YOUR<br>FRIENDS TO GO TO:<br><strong> '+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong>')
         $text.invisible();
         $this.addChild($text);
