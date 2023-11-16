@@ -14,7 +14,7 @@ Class(function Config() {
   }
 
   this.GAME = {
-    laps: 5,
+    laps: 10,
     canFinish: true,
     threshold: 20,
     overlap: 50,

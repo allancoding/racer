@@ -1,3 +1,4 @@
 node_modules/
 ssl/server.cert
 ssl/server.key
+config.json
