@@ -1,0 +1,1759 @@
+<?xml version="1.0"?>
+<root fileName="config.xml">
+    <config serverPath="http://soundcontroller.se/tool/racer/">
+        <swffiles>
+            <file autoload="1" fileSize="472595">sounds_0.swf</file>
+            <file autoload="0" fileSize="198209">sounds_1.swf</file>
+            <file autoload="0" fileSize="205913">sounds_2.swf</file>
+            <file autoload="0" fileSize="188606">sounds_3.swf</file>
+            <file autoload="0" fileSize="187291">sounds_4.swf</file>
+            <file autoload="0" fileSize="1060754">sounds_5.swf</file>
+        </swffiles>
+    </config>
+    <global>
+        <variables>
+            <item id="doLog" val="1" />
+        </variables>
+    </global>
+    <busData fileName="bus.xml">
+        <master volume="0.8" pan="0" />
+        <bus name="main" volume="0.8" pan="0" parent="_MasterBus" />
+        <bus name="fx" volume="0.5" pan="0" parent="main" />
+        <bus name="music" volume="1" pan="0" parent="main" />
+          <bus name="mylayer" volume="1" pan="0" parent="music" />
+        <bus name="mainEngine" volume="0" pan="0" parent="fx" />
+    </busData>
+    <soundData fileName="sounds.xml">
+        <sound>
+            <name>AudioSprite</name>
+            <length>15500</length>
+            <load>audiotag</load>
+        </sound>
+        <sound>
+            <name>Race_1</name>
+            <length>33000</length>
+            <load>stream</load>
+        </sound>
+        <sound>
+            <name>Race_2</name>
+            <length>33000</length>
+            <load>stream</load>
+        </sound>
+        <sound>
+            <name>Race_3</name>
+            <length>33000</length>
+            <load>stream</load>
+        </sound>
+        <sound>
+            <name>Race_4</name>
+            <length>33000</length>
+            <load>stream</load>
+        </sound>
+        <sound>
+            <name>Bridge_Android</name>
+            <length>33000</length>
+            <load>stream</load>
+        </sound>
+        <sound>
+            <name>Arp_4_1</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_1</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_2</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_3</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_4</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_5</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_6</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_7</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>ArpCowbell_1_8</name>
+            <length>128,4</length>
+            <load>2</load>
+        </sound>
+        <sound>
+            <name>Arp_1_1</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_1</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_2</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_3</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_4</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_5</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_6</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_7</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Bridge_1_8</name>
+            <length>128,4</length>
+            <load>5</load>
+        </sound>
+        <sound>
+            <name>Cowbell_1_1</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+        <name>CarCrash1_1</name>
+        <start>0</start>
+        <duration>66150</duration>
+        <src>AudioSprite</src>
+        <load>5</load>
+      </sound>
+      <sound>
+        <name>CarCrash1_2</name>
+        <start>69120</start>
+        <duration>66150</duration>
+        <src>AudioSprite</src>
+        <load>5</load>
+      </sound>
+      <sound>
+        <name>CarCrash1_4</name>
+        <start>138240</start>
+        <duration>66150</duration>
+        <src>AudioSprite</src>
+        <load>5</load>
+      </sound>
+      <sound>
+        <name>Engine2</name>
+        <start>207360</start>
+        <duration>480690</duration>
+        <src>AudioSprite</src>
+        <load>-1</load>
+      </sound>
+      <sound>
+        <name>Fanfare_All</name>
+        <start>691200</start>
+        <duration>144704</duration>
+        <src>AudioSprite</src>
+        <load>-1</load>
+      </sound>
+      <sound>
+        <name>FX_CarPlace</name>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_ChangeName</name>
+        <start>875520</start>
+        <duration>55125</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_Error</name>
+        <start>944640</start>
+        <duration>15504</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_Finished</name>
+        <start>967680</start>
+        <duration>97380</duration>
+        <src>AudioSprite</src>
+        <load>5</load>
+      </sound>
+      <sound>
+        <name>FX_GenericSwooshIn</name>
+        <start>1082880</start>
+        <duration>35699</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_GenericSwooshOut</name>
+        <start>1128960</start>
+        <duration>35699</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_Join</name>
+        <start>1175040</start>
+        <duration>80127</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_Laser</name>
+        <start>1261260</start>
+        <duration>25055</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_Leave</name>
+        <start>1313280</start>
+        <duration>66150</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_LogoOut</name>
+        <start>1382400</start>
+        <duration>81653</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_ProtipIn</name>
+        <start>1474560</start>
+        <duration>92544</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_ProtipOut</name>
+        <start>1589760</start>
+        <duration>82688</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_SkidCrash</name>
+        <start>1678887</start>
+        <duration>77520</duration>
+        <src>AudioSprite</src>
+        <load>-1</load>
+      </sound>
+      <sound>
+        <name>FX_StartRaceClick</name>
+        <start>1770615</start>
+        <duration>69361</duration>
+        <src>AudioSprite</src>
+        <load>0</load>
+      </sound>
+      <sound>
+        <name>FX_TapReady</name>
+        <start>1866240</start>
+        <duration>83790</duration>
+        <src>AudioSprite</src>
+        <load>5</load>
+      </sound>
+      <sound>
+        <name>Ready_Set_Go</name>
+        <start>1958400</start>
+        <duration>170950</duration>
+        <src>AudioSprite</src>
+        <load>-1</load>
+      </sound>
+      <sound>
+          <name>FX_Click</name>
+          <start>2138850</start>
+          <duration>29033</duration>
+          <src>AudioSprite</src>
+          <load>0</load>
+        </sound>
+        <sound>
+          <name>FX_Skid</name>
+          <load>5</load>
+        </sound>
+        <sound>
+          <name>Fanfare_1</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>Fanfare_2</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>Fanfare_3</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>Fanfare_4</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>Fanfare_5</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>FX_Ready</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>FX_Go</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>FX_Lap</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+          <name>FX_FinalLap</name>
+          <load>5</load>
+        </sound> 
+        <sound>
+            <name>GitHiHat_1_1</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>GitHiHat_1_2</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>GitHiHat_1_3</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>GitHiHat_1_4</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>GitHiHat_1_5</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>GitHiHat_1_6</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>GitHiHat_1_7</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>GitHiHat_1_8</name>
+            <length>128,4</length>
+            <load>3</load>
+        </sound>
+        <sound>
+            <name>HiHat_1_1</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>KickBass_1_1</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>KickBass_1_3</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>KickBass_1_5</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>KickBass_1_7</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>KickBass_1_8</name>
+            <length>128,4</length>
+            <load>0</load>
+        </sound>
+        <sound>
+            <name>Mel_1_1</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Mel_1_2</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Mel_1_3</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Mel_1_4</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Mel_1_5</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Mel_1_6</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Mel_1_7</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Mel_1_8</name>
+            <length>128,4</length>
+            <load>1</load>
+        </sound>
+        <sound>
+            <name>Rest_1_1</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Rest_1_2</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Rest_1_3</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Rest_1_4</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Rest_1_5</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Rest_1_6</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Rest_1_7</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Rest_1_8</name>
+            <length>128,4</length>
+            <load>4</load>
+        </sound>
+        <sound>
+            <name>Car_IdleLoop_5s.m4a</name>
+            <length>5000</length>
+            <load>5</load>
+        </sound>       
+        <sound>
+            <name>Car_DriveAndLoop.m4a</name>
+            <length>5000</length>
+            <load>5</load>
+        </sound>             
+        <sound>
+            <name>Car_SlowDown_2</name>
+            <length>3000</length>
+            <load>5</load>
+        </sound>
+        <soundObject>
+            <name>Car_DriveAndLoop</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mainEngine</parentBus>
+            <loop>1</loop>
+            <loopStart>5000</loopStart>
+            <loopEnd>9000</loopEnd>
+            <sound offset="0">Car_DriveAndLoop.m4a</sound>
+        </soundObject>
+        <soundObject>
+            <name>Car_SlowDown</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mainEngine</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Car_SlowDown_2</sound>
+        </soundObject>
+        <soundObject>
+            <name>Car_IdleLoop</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mainEngine</parentBus>
+            <loop>1</loop>
+            <loopStart>100</loopStart>
+            <loopEnd>4900</loopEnd>
+            <sound offset="0">Car_IdleLoop_5s.m4a</sound>
+        </soundObject>
+        <arrangement>
+            <name>Car_SlowDown</name>
+            <domain>down</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_SlowDown</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_Drive</name>
+            <domain>drive</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_DriveAndLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Idle</name>
+            <domain>idle</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_IdleLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_SlowDown1</name>
+            <domain>down1</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_SlowDown</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_Drive1</name>
+            <domain>drive1</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_DriveAndLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Idle1</name>
+            <domain>idle1</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_IdleLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_SlowDown2</name>
+            <domain>down2</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_SlowDown</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_Drive2</name>
+            <domain>drive2</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_DriveAndLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Idle2</name>
+            <domain>idle2</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_IdleLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_SlowDown3</name>
+            <domain>down3</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_SlowDown</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_Drive3</name>
+            <domain>drive3</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_DriveAndLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Idle3</name>
+            <domain>idle3</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_IdleLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_SlowDown4</name>
+            <domain>down4</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_SlowDown</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_Drive4</name>
+            <domain>drive4</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_DriveAndLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Idle4</name>
+            <domain>idle4</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_IdleLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_SlowDown5</name>
+            <domain>down5</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_SlowDown</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Car_Drive5</name>
+            <domain>drive5</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_DriveAndLoop</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Idle5</name>
+            <domain>idle5</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Car_IdleLoop</soundObject>
+        </arrangement>
+        <soundObject>
+            <name>Arp_4</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">Arp_4_1</sound>
+            <sound offset="128,4">Arp_4_1</sound>
+            <sound offset="128,8">Arp_4_1</sound>
+            <sound offset="128,12">Arp_4_1</sound>
+            <sound offset="128,16">Arp_4_1</sound>
+            <sound offset="128,20">Arp_4_1</sound>
+            <sound offset="128,24">Arp_4_1</sound>
+            <sound offset="128,28">Arp_4_1</sound>
+        </soundObject>
+        <soundObject>
+            <name>ArpCowbell_1</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mylayer</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">ArpCowbell_1_1</sound>
+            <sound offset="128,4">ArpCowbell_1_2</sound>
+            <sound offset="128,8">ArpCowbell_1_3</sound>
+            <sound offset="128,12">ArpCowbell_1_4</sound>
+            <sound offset="128,16">ArpCowbell_1_5</sound>
+            <sound offset="128,20">ArpCowbell_1_6</sound>
+            <sound offset="128,24">ArpCowbell_1_7</sound>
+            <sound offset="128,28">ArpCowbell_1_8</sound>
+        </soundObject>
+        <soundObject>
+            <name>Arp_1</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">Arp_1_1</sound>
+            <sound offset="128,4">Arp_1_1</sound>
+            <sound offset="128,8">Arp_1_1</sound>
+            <sound offset="128,12">Arp_1_1</sound>
+            <sound offset="128,16">Arp_1_1</sound>
+            <sound offset="128,20">Arp_1_1</sound>
+            <sound offset="128,24">Arp_1_1</sound>
+            <sound offset="128,28">Arp_1_1</sound>
+        </soundObject>
+        <soundObject>
+            <name>Bridge_1</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">Bridge_1_1</sound>
+            <sound offset="128,4">Bridge_1_2</sound>
+            <sound offset="128,8">Bridge_1_3</sound>
+            <sound offset="128,12">Bridge_1_4</sound>
+            <sound offset="128,16">Bridge_1_5</sound>
+            <sound offset="128,20">Bridge_1_6</sound>
+            <sound offset="128,24">Bridge_1_7</sound>
+            <sound offset="128,28">Bridge_1_8</sound>
+        </soundObject>
+        <soundObject>
+            <name>Click</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Click</sound>
+        </soundObject>
+        <soundObject>
+            <name>Cowbell_1</name>
+            <mode>pattern</mode>
+            <volume>0.7</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">Cowbell_1_1</sound>
+            <sound offset="128,4">Cowbell_1_1</sound>
+            <sound offset="128,8">Cowbell_1_1</sound>
+            <sound offset="128,12">Cowbell_1_1</sound>
+            <sound offset="128,16">Cowbell_1_1</sound>
+            <sound offset="128,20">Cowbell_1_1</sound>
+            <sound offset="128,24">Cowbell_1_1</sound>
+            <sound offset="128,28">Cowbell_1_1</sound>
+        </soundObject>
+        <soundObject>
+            <name>Crash</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">CarCrash1_1</sound>
+            <sound offset="0">CarCrash1_2</sound>
+            <sound offset="0">CarCrash1_4</sound>
+        </soundObject>
+        <soundObject>
+            <name>Fanfare_1</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Fanfare_1</sound>
+        </soundObject>
+        <soundObject>
+            <name>Fanfare_2</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Fanfare_2</sound>
+        </soundObject>
+        <soundObject>
+            <name>Fanfare_3</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Fanfare_3</sound>
+        </soundObject>
+        <soundObject>
+            <name>Fanfare_4</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Fanfare_4</sound>
+        </soundObject>
+        <soundObject>
+            <name>Fanfare_5</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Fanfare_5</sound>
+        </soundObject>
+        <soundObject>
+            <name>Fanfare_All</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Fanfare_All</sound>
+        </soundObject>
+        <soundObject>
+            <name>Ready_Set_Go</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">Ready_Set_Go</sound>
+        </soundObject>
+        <soundObject>
+            <name>Engine</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mainengine</parentBus>
+            <loop>1</loop>
+            <sound offset="0">FX_CarPlace</sound>
+        </soundObject>
+        <soundObject>
+            <name>Engine2</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>1</loop>
+            <sound offset="0">Engine2</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_CarPlace</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_CarPlace</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_Error</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Error</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_Lap</name>
+            <mode>steptrig</mode>
+            <volume>0.8</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Lap</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_FinalLap</name>
+            <mode>steptrig</mode>
+            <volume>0.8</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_FinalLap</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_Finished</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Finished</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_GenericSwooshIn</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_GenericSwooshIn</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_GenericSwooshOut</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_GenericSwooshOut</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_Laser</name>
+            <mode>steptrig</mode>
+            <volume>0.3</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Laser</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_Skid</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Skid</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_SkidCrash</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_SkidCrash</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_StartRaceClick</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_StartRaceClick</sound>
+        </soundObject>
+        <soundObject>
+            <name>FX_TapReady</name>
+            <mode>steptrig</mode>
+            <volume>0.9</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_TapReady</sound>
+        </soundObject>
+        <soundObject>
+            <name>GitHiHat_1</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mylayer</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">GitHiHat_1_1</sound>
+            <sound offset="128,4">GitHiHat_1_2</sound>
+            <sound offset="128,8">GitHiHat_1_3</sound>
+            <sound offset="128,12">GitHiHat_1_4</sound>
+            <sound offset="128,16">GitHiHat_1_5</sound>
+            <sound offset="128,20">GitHiHat_1_6</sound>
+            <sound offset="128,24">GitHiHat_1_7</sound>
+            <sound offset="128,28">GitHiHat_1_8</sound>
+        </soundObject>
+        <soundObject>
+            <name>Go</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Go</sound>
+        </soundObject>
+        <soundObject>
+            <name>HiHat_1</name>
+            <mode>pattern</mode>
+            <volume>0.8</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">HiHat_1_1</sound>
+            <sound offset="128,4">HiHat_1_1</sound>
+            <sound offset="128,8">HiHat_1_1</sound>
+            <sound offset="128,12">HiHat_1_1</sound>
+            <sound offset="128,16">HiHat_1_1</sound>
+            <sound offset="128,20">HiHat_1_1</sound>
+            <sound offset="128,24">HiHat_1_1</sound>
+            <sound offset="128,28">HiHat_1_1</sound>
+        </soundObject>
+        <soundObject>
+            <name>Join</name>
+            <mode>steptrig</mode>
+            <volume>0.7</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Join</sound>
+        </soundObject>
+        <soundObject>
+            <name>Leave</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Leave</sound>
+        </soundObject>
+        <soundObject>
+            <name>ChangeName</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_ChangeName</sound>
+        </soundObject>
+        <soundObject>
+            <name>KickBass_1</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mylayer</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">KickBass_1_1</sound>
+            <sound offset="128,4">KickBass_1_1</sound>
+            <sound offset="128,8">KickBass_1_3</sound>
+            <sound offset="128,12">KickBass_1_3</sound>
+            <sound offset="128,16">KickBass_1_5</sound>
+            <sound offset="128,20">KickBass_1_5</sound>
+            <sound offset="128,24">KickBass_1_7</sound>
+            <sound offset="128,28">KickBass_1_8</sound>
+        </soundObject>
+        <soundObject>
+            <name>LogoOut</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_LogoOut</sound>
+        </soundObject>
+        <soundObject>
+            <name>Mel_1</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mylayer</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">Mel_1_1</sound>
+            <sound offset="128,4">Mel_1_2</sound>
+            <sound offset="128,8">Mel_1_3</sound>
+            <sound offset="128,12">Mel_1_4</sound>
+            <sound offset="128,16">Mel_1_5</sound>
+            <sound offset="128,20">Mel_1_6</sound>
+            <sound offset="128,24">Mel_1_7</sound>
+            <sound offset="128,28">Mel_1_8</sound>
+        </soundObject>
+        <soundObject>
+            <name>ProtipIn</name>
+            <mode>steptrig</mode>
+            <volume>0.6</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_ProtipIn</sound>
+        </soundObject>
+        <soundObject>
+            <name>ProtipOut</name>
+            <mode>steptrig</mode>
+            <volume>0.6</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_ProtipOut</sound>
+        </soundObject>
+        <soundObject>
+            <name>Race_Loop_1</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="0">Race_1</sound>
+        </soundObject>
+        <soundObject>
+            <name>Race_Loop_2</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="0">Race_2</sound>
+        </soundObject>
+        <soundObject>
+            <name>Race_Loop_3</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="0">Race_3</sound>
+        </soundObject>
+        <soundObject>
+            <name>Race_Loop_4</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="0">Race_4</sound>
+        </soundObject>
+        <soundObject>
+            <name>Bridge_Android</name>
+            <mode>loop</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>music</parentBus>
+            <loop>1</loop>
+            <sound offset="0">Bridge_Android</sound>
+        </soundObject>
+        <soundObject>
+            <name>Ready</name>
+            <mode>steptrig</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>fx</parentBus>
+            <loop>0</loop>
+            <sound offset="0">FX_Ready</sound>
+        </soundObject>
+        <soundObject>
+            <name>Rest_1</name>
+            <mode>pattern</mode>
+            <volume>1</volume>
+            <pan>0</pan>
+            <parentBus>mylayer</parentBus>
+            <loop>1</loop>
+            <sound offset="128,0">Rest_1_1</sound>
+            <sound offset="128,4">Rest_1_2</sound>
+            <sound offset="128,8">Rest_1_3</sound>
+            <sound offset="128,12">Rest_1_4</sound>
+            <sound offset="128,16">Rest_1_5</sound>
+            <sound offset="128,20">Rest_1_6</sound>
+            <sound offset="128,24">Rest_1_7</sound>
+            <sound offset="128,28">Rest_1_8</sound>
+        </soundObject>
+        <arrangement>
+            <name>Bridge</name>
+            <domain>main</domain>
+            <retrigg>0</retrigg>
+            <tempo>128</tempo>
+            <soundObject>Bridge_1</soundObject>
+            <soundObject>Arp_4</soundObject>
+            <soundObject>Cowbell_1</soundObject>
+            <soundObject>Arp_1</soundObject>
+            <soundObject>HiHat_1</soundObject> 
+        </arrangement>
+        <arrangement>
+            <name>Engine</name>
+            <domain>engine</domain>
+            <retrigg>0</retrigg>
+            <soundObject>Engine</soundObject>
+        </arrangement>
+        <arrangement>
+            <name>Lobby</name>
+            <domain>main</domain>
+            <retrigg>0</retrigg>
+            <tempo>128</tempo>
+            <soundObject>KickBass_1</soundObject>
+            <soundObject>Arp_4</soundObject>
+            <soundObject>Cowbell_1</soundObject>
+            <soundObject>Arp_1</soundObject>
+            <soundObject>HiHat_1</soundObject> 
+        </arrangement>
+        <arrangement>
+            <name>Race</name>
+            <domain>main</domain>
+            <retrigg>0</retrigg>
+            <tempo>128</tempo>
+            <soundObject>KickBass_1</soundObject>
+            <soundObject>Mel_1</soundObject>
+            <soundObject>ArpCowbell_1</soundObject>
+            <soundObject>GitHiHat_1</soundObject>
+            <soundObject>Rest_1</soundObject>
+        </arrangement>
+    </soundData>
+    <eventData fileName="event.xml">
+        <action>
+            <event>type</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_Laser" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>start_click</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_StartRaceClick" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>tap_ready</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_TapReady" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>skid</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_Skid" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>skid_start</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_Skid" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>skid_stop</event>
+            <targets>
+                <target id="StopSOAction">
+                    <arg key="name" value="FX_Skid" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>result_out</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_GenericSwooshOut" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>result_in</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_GenericSwooshIn" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>final_car_finished</event>
+            <targets>
+                <target id="FadeAndStopDomainAction">
+                    <arg key="name" value="idle" />
+                    <arg key="fadeOutTime" value="500" />
+                </target>
+                <target id="FadeAndStopDomainAction">
+                    <arg key="name" value="drive" />
+                    <arg key="fadeOutTime" value="500" />
+                </target>
+                <target id="FadeAndStopDomainAction">
+                    <arg key="name" value="down" />
+                    <arg key="fadeOutTime" value="500" />
+                </target>
+                <target id="BusVolumeAction">
+                    <arg key="name" value="mainEngine" />
+                    <arg key="vol" value="0" />
+                    <arg key="time" value="500" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>game_end</event>
+            <targets>
+                <target id="SyncFadeAndStopDomainAction">
+                    <arg key="name" value="main" />
+                    <arg key="fadeOutTime" value="1500" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>stop_lobby</event>
+            <targets>
+                <target id="SyncFadeAndStopDomainAction">
+                    <arg key="name" value="main" />
+                    <arg key="fadeOutTime" value="1500" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>error</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_Error" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>car_place</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_CarPlace" />
+                    <arg key="delay" value="100" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>skid_crash</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_SkidCrash" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>finished</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_Finished" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>final_lap</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_FinalLap" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>lap</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="FX_Lap" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>join</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Join" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>leave</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Leave" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>change_name</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="ChangeName" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>logo_out</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="LogoOut" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>lineup_out</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="ProtipOut" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>lineup_in</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="ProtipIn" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>click</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Click" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>crash</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Crash" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>collision</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Crash" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>ready</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Ready" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>go</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Go" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>fanfare_all</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Fanfare_All" />
+                    <arg key="delay" value="0" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>ready_set_go</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Ready_Set_Go" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>fanfare_0</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Fanfare_1" />
+                    <arg key="delay" value="0" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>fanfare_1</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Fanfare_2" />
+                    <arg key="delay" value="469" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>fanfare_2</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Fanfare_3" />
+                    <arg key="delay" value="937" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>fanfare_3</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Fanfare_4" />
+                    <arg key="delay" value="1406" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>fanfare_4</event>
+            <targets>
+                <target id="StartSOAction">
+                    <arg key="name" value="Fanfare_5" />
+                    <arg key="delay" value="1875" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>lobby</event>
+            <targets>
+                <target id="SyncPlayArrAction">
+                    <arg key="name" value="Lobby" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>update_delta</event>
+            <targets>
+                <target id="UpdateDeltaAction">
+                    <arg key="name" value="main" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>test</event>
+            <targets>
+                <target id="MobileStartAction"></target>
+            </targets>
+        </action>
+        <action>
+            <event>race</event>
+            <targets>
+                <target id="SyncPlayArrAction">
+                    <arg key="name" value="Race" />
+                </target>
+                <target id="BusVolumeAction">
+                    <arg key="name" value="mylayer" />
+                    <arg key="vol" value="0.5" />
+                    <arg key="time" value="300" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>bridge</event>
+            <targets>
+                <target id="SyncPlayArrAction">
+                    <arg key="name" value="Bridge" />
+                </target>
+                <target id="BusVolumeAction">
+                    <arg key="name" value="mylayer" />
+                    <arg key="vol" value="1" />
+                    <arg key="time" value="200" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>race_loop_1</event>
+            <targets>
+                <target id="PlaySOAction">
+                    <arg key="name" value="Race_Loop_1" />
+                </target>
+                <target id="BypassEventsAction"></target>
+            </targets>
+        </action>
+        <action>
+            <event>race_loop_2</event>
+            <targets>
+                <target id="PlaySOAction">
+                    <arg key="name" value="Race_Loop_1" />
+                </target>
+                <target id="BypassEventsAction"></target>
+            </targets>
+        </action>
+        <action>
+            <event>race_loop_3</event>
+            <targets>
+                <target id="PlaySOAction">
+                    <arg key="name" value="Race_Loop_2" />
+                </target>
+                <target id="BypassEventsAction"></target>
+            </targets>
+        </action>
+        <action>
+            <event>race_loop_4</event>
+            <targets>
+                <target id="PlaySOAction">
+                    <arg key="name" value="Race_Loop_3" />
+                </target>
+                <target id="BypassEventsAction"></target>
+            </targets>
+        </action>
+        <action>
+            <event>bridge_android</event>
+            <targets>
+                <target id="PlaySOAction">
+                    <arg key="name" value="Bridge_Android" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>race_loop_5</event>
+            <targets>
+                <target id="PlaySOAction">
+                    <arg key="name" value="Race_Loop_4" />
+                </target>
+                <target id="BypassEventsAction"></target>
+            </targets>
+        </action>
+        <action>
+            <event>stop_race_loop</event>
+            <targets>
+                <target id="StopSOAction">
+                    <arg key="name" value="Race_Loop_1" />
+                </target>
+                <target id="StopSOAction">
+                    <arg key="name" value="Race_Loop_2" />
+                </target>
+                <target id="StopSOAction">
+                    <arg key="name" value="Race_Loop_3" />
+                </target>
+                <target id="StopSOAction">
+                    <arg key="name" value="Race_Loop_4" />
+                </target>
+                <target id="StopSOAction">
+                    <arg key="name" value="Race_Loop_5" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>stop_bridge_loop</event>
+            <targets>
+                <target id="StopSOAction">
+                    <arg key="name" value="Bridge_Android" />
+                </target>
+                <target id="ResetEventsAction"></target>
+            </targets>
+        </action>
+        <action>
+            <event>new_engine</event>
+            <targets>
+                <target id="BusVolumeAction">
+                    <arg key="name" value="mainEngine" />
+                    <arg key="vol" value="0.7" />
+                    <arg key="time" value="200" />
+                </target>
+                <target id="PlayArrAction">
+                  <arg key="name" value="Idle"/>
+                  <arg key="engine" value="1"/>
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>new_engine1</event>
+            <targets>
+                <target id="BusVolumeAction">
+                    <arg key="name" value="mainEngine" />
+                    <arg key="vol" value="0.6" />
+                    <arg key="time" value="700" />
+                </target>
+                <target id="PlayArrAction">
+                  <arg key="name" value="Idle"/>
+                  <arg key="engine" value="1"/>
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>throttle_on</event>
+            <targets>
+                <target id="PlaySOAction">
+                    <arg key="name" value="Engine2" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>throttle_off</event>
+            <targets>
+                <target id="StopSOAction">
+                    <arg key="name" value="Engine2" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>vol_up</event>
+            <targets>
+                <target id="BusVolumeAction">
+                    <arg key="name" value="mylayer" />
+                    <arg key="vol" value="1" />
+                    <arg key="time" value="300" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>vol_down</event>
+            <targets>
+                <target id="BusVolumeAction">
+                    <arg key="name" value="mylayer" />
+                    <arg key="vol" value="0.5" />
+                    <arg key="time" value="300" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>throttle_on_wa</event>
+            <targets>
+                <target id="PlayArrAction">
+                    <arg key="name" value="Car_Drive"/>
+                    <arg key="offsetSound" value="1"/>
+                    <arg key="engine" value="1"/>
+                </target>
+                <target id="FadeAndStopArrAction">
+                    <arg key="name" value="Idle" />
+                    <arg key="fadeOutTime" value="200" />
+                    <arg key="engine" value="1"/>
+                </target>
+                <target id="FadeAndStopArrAction">
+                    <arg key="name" value="Car_SlowDown" />
+                    <arg key="fadeOutTime" value="200" />
+                    <arg key="engine" value="1"/>
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>throttle_off_wa</event>
+            <targets>
+                <target id="FadeAndStopArrAction">
+                    <arg key="name" value="Car_Drive" />
+                    <arg key="fadeOutTime" value="200" />
+                    <arg key="engine" value="1"/>
+                </target>
+                <target id="PlayArrAction">
+                    <arg key="name" value="Car_SlowDown" />
+                    <arg key="engine" value="1"/>
+                </target>
+                <target id="PlayArrAction">
+                  <arg key="name" value="Idle"/>
+                  <arg key="engine" value="1"/>
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>fade_out</event>
+            <targets>
+                <target id="SyncFadeAndStopDomainAction">
+                    <arg key="name" value="main" />
+                    <arg key="fadeOutTime" value="2500" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>load_1</event>
+            <targets>
+                <target id="LoadSWFAction">
+                    <arg key="name" value="sounds_1.swf" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>load_2</event>
+            <targets>
+                <target id="LoadSWFAction">
+                    <arg key="name" value="sounds_2.swf" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>load_3</event>
+            <targets>
+                <target id="LoadSWFAction">
+                    <arg key="name" value="sounds_3.swf" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>load_4</event>
+            <targets>
+                <target id="LoadSWFAction">
+                    <arg key="name" value="sounds_4.swf" />
+                </target>
+            </targets>
+        </action>
+        <action>
+            <event>load_5</event>
+            <targets>
+                <target id="LoadSWFAction">
+                    <arg key="name" value="sounds_5.swf" />
+                </target>
+            </targets>
+        </action>
+    </eventData>
+</root>

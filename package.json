@@ -1,0 +1,17 @@
+{
+  "name": "racer",
+  "version": "1.2.0",
+  "description": "Reverse engineered Chrome Experiment RACER",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Allan Niles",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "ws": "^7.5.9"
+  }
+}

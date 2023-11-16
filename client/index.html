@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta
+      content="black-translucent"
+      name="apple-mobile-web-app-status-bar-style"
+    />
+    <meta content="NOODP" name="robots" />
+    <link href="/racer/favicon.ico" rel="icon" />
+    <meta content="RACER: A Chrome Experiment" itemprop="name" />
+    <meta
+      content="Race across multiple screens. No apps. No downloads. Just start a race—sync up to five devices and tap your screens to rev your engines."
+      itemprop="description"
+    />
+    <meta
+      content="http://chrome.com/racer/assets/images/common/logos/share.png"
+      itemprop="image"
+    />
+    <meta content="RACER: A Chrome Experiment" property="og:title" />
+    <meta
+      content="http://chrome.com/racer/assets/images/common/logos/share.png"
+      property="og:image"
+    />
+    <meta
+      content="Race across multiple screens. No apps. No downloads. Just start a race—sync up to five devices and tap your screens to rev your engines."
+      property="og:description"
+    />
+
+    <title>RACER: A Chrome Experiment</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="assets/js/lib/pathseg.js"></script>
+    <script type="text/javascript" src="assets/js/lib/webkitAudioContextMonkeyPatch.js"></script>
+    
+    <!--<script type="text/javascript" src="https://racer.activetheorylab.net/cms/data/"></script>-->
+    <!--<script src="https://storage.googleapis.com/chrome-racer-static/assets/data/mobile.js"></script>
+    <script src="https://storage.googleapis.com/chrome-racer-static/assets/js/lib/paper.js"></script>-->
+    <script src="assets/js/hydra/hydra.js" type="text/javascript"></script>
+
+    <script
+      src="assets/js/racer/events/RacerEvents.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/config/Config.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/util/RacerDevice.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/util/RacerUtil.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/util/SocketConnection.js"
+      type="text/javascript"
+    ></script>
+    <script src="assets/js/sound/RacerSound.js" type="text/javascript"></script>
+
+    <!--[if !IE]-->
+    <script src="assets/js/lib/SocketIO.js" type="text/javascript"></script>
+    <script src="assets/js/lib/RemoteDebug.js" type="text/javascript"></script>
+    <script src="assets/js/lib/scsound.js" type="text/javascript"></script>
+    <!--[endif]-->
+
+    <script
+      src="assets/js/racer/models/track/TrackModel.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/models/lobby/LobbyModel.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/models/socket/SocketModel.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/models/device/DeviceModel.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/models/config/ConfigModel.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/models/content/ContentModel.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/models/main/Data.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/events/RacerEvents.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/controllers/container/Container.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/controllers/loader/Loader.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/controllers/menu/Menu.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/controllers/content/Content.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/controllers/lobby/Lobby.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/controllers/lineup/LineUp.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/controllers/track/Track.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/views/common/LogoView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/common/LogoViewCar.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/common/LogoViewLine.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/common/ChromeExperimentView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/common/HorizontalButtonView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/common/Cover.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/common/ErrorOverlay.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/common/LinksView.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/views/loader/LoaderView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/loader/LoaderViewInstruction.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/views/menu/desktop/MenuDesktopView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/menu/desktop/MenuDesktopViewMenu.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/menu/desktop/MenuDesktopViewMenuButton.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/menu/mobile/MenuMobileView.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/views/content/ContentView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/content/ContentViewSection.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/content/ContentViewHeader.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/content/ContentVideoView.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/views/lobby/common/code/LobbyCodeView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/code/LobbyCodeViewInput.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/code/LobbyCodeViewCode.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/code/LobbyCodeViewCodeSingle.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/player/LobbyPlayerView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/player/LobbyPlayerViewPlayer.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/player/LobbyPlayerViewPlayerYou.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/trackselect/LobbyTrackSelectView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/trackselect/LobbyTrackSelectViewTrack.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lobby/common/LobbyView.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/views/lineup/common/LineUpViewCar.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lineup/common/LineUpViewTitle.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lineup/common/LineUpViewTitleLetter.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lineup/common/LineUpViewDevices.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lineup/common/LineUpViewDevicesDevice.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lineup/common/LineUpViewDevicesYou.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lineup/common/LineUpViewTip.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/lineup/mobile/LineUpMobileView.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/racer/views/track/common/TrackCarView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackCarViewSpark.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackGlowView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackPathView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackPathViewRenderer.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackObserver.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackTitleView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackInitializingView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/common/TrackInitializingViewAnimation.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/mobile/TrackMobileView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/mobile/TrackMobileViewReady.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/mobile/TrackMobileViewBanner.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/mobile/TrackMobileViewResult.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/desktop/TrackDesktopView.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/racer/views/track/desktop/TrackDesktopViewPlayer.js"
+      type="text/javascript"
+    ></script>
+
+    <script src="assets/js/racer/Main.js" type="text/javascript"></script>
+
+    <!-- Cookie Consent CSS -->
+    <link
+      href="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.css"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+   </head>
+  <body>
+    <!-- Cookie Consent JS -->
+    <script
+      src="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.js"
+      data-glue-cookie-notification-bar-category="2B"
+    ></script>
+  </body>
+</html>
