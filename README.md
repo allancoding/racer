@@ -15,7 +15,7 @@ Edit `config.json` as necessary.
 
 Start the server by running:
 ```sh
-npm install
+npm i
 npm start
 ```
 
