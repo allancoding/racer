@@ -7,7 +7,7 @@ if (config.https == true) {
     const https = require("https"); 
     const { readFileSync } = require("fs");
     try {
-        const server = https.createServer({
+        server = https.createServer({
             cert: readFileSync("./ssl/server.cert"),
             key: readFileSync("./ssl/server.key")
         }, app);
