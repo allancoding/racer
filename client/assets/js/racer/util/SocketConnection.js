@@ -216,6 +216,10 @@ SocketConnection.pickRelay = function () {
             callback(d.relay, d.delta);
         }
         for (var i = 0; i < relays.length; i++) {
+            if (relays[i] == "self") {
+                var ws_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
+                relays[i] = window.location.port != '' ? ws_protocol+window.location.hostname+":"+window.location.port : ws_protocol+window.location.hostname;
+            }
             pollRelay(relays[i], function (relay, delta) {
                 
                 //console.log("pollRelay:"+' '+relay+' '+delta); //please don't remove yet (it's useful debugging!)

@@ -1,6 +1,6 @@
 {
   "name": "racer",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Reverse engineered Chrome Experiment RACER",
   "main": "index.js",
   "scripts": {

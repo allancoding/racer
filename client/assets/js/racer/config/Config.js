@@ -7,6 +7,7 @@ Class(function Config() {
   this.DISABLE_SOUNDS = false;
   this.USE_WEBSOCKETS = true;
   this.SKIP_INTRO = false;
+  this.LINK = "example.com/racer";
 
   if (window.location.hash.strpos("forcemobile")) {
     this.DISABLE_SOUNDS = false;
@@ -14,9 +15,9 @@ Class(function Config() {
   }
 
   this.GAME = {
-    laps: 10,
+    laps: 9,
     canFinish: true,
-    threshold: 20,
+    threshold: 25,
     overlap: 50,
     offTrack: true,
     canCrash: true,
@@ -113,9 +114,9 @@ Class(function Config() {
   ];
 
   this.APP_ENGINE = window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname;
-  this.PATH = "https://storage.googleapis.com/chrome-racer-static/";
-
+  this.PATH = window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname+"/racer/";
   this.SOCKET_SERVER = window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname;
+  this.URL = this.LINK || this.APP_ENGINE;
 
   this.PRESENTATION = (function () {
     if (window.location.href.strpos("_prezinstall")) {

@@ -1,16 +1,29 @@
-const https = require("https");
-const { readFileSync } = require("fs");
-
+const express = require("express");
+const app = express();
+const mem = require("./mem_db.js");
+const wss = require("./ws_server.js")(app, mem);
 const config = require("./config.json");
-
-const api = require("./api_server")();
-
-const server = https.createServer({
-    cert: readFileSync("./ssl/server.cert"),
-    key: readFileSync("./ssl/server.key")
-}, api);
-
-const mem = require("./mem_db");
-const wss = require("./ws_server")(server, mem);
-
-server.listen(config.server_port, () => console.log(`Racer server listening on https://${config.server_ip}:${config.server_port}`));
+app.use(require("morgan")("dev"));
+app.use(require("cors")());
+app.get('/', (req, res) => {
+    res.redirect('/racer');
+});
+app.use("/racer", express.static("client"));
+app.get("/control/start", (req, res) => {
+    res.send({
+        gameId: 123456,
+        relays: ['self','ws://localhost:8443'],
+        secureRelays: ['self','wss://localhost:8443'],
+    });
+});
+app.post("/control/register", (req, res) => {
+    res.send({});
+});
+app.get("/control/join", (req, res) => {
+    res.send({
+        relay: 'self',
+    });
+});
+app.listen(config.port, () => {
+    console.log(`Racer server listening on port ${config.port}`)
+});
