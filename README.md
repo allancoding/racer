@@ -12,7 +12,7 @@ openssl req -nodes -new -x509 -keyout ssl/server.key -out ssl/server.cert
 Edit `config.json` as necessary.
 ```
 {
-    "port": "8443",
+    "port": "3000",
     "https": false,
 }
 ```

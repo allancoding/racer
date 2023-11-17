@@ -17,7 +17,6 @@ if (config.https == true) {
         console.warn("openssl req -nodes -new -x509 -keyout ssl/server.key -out ssl/server.cert");
         process.exit(1);
     }
-    server = https.createServer(app);
 } else {
     const http = require('http');
     server = http.createServer(app);
