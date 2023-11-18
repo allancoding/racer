@@ -438,6 +438,10 @@ Class(function SocketModel() {
             XHR.get(Config.APP_ENGINE+'/control/join', {gameId: code}, function(data) {
                 XHR.post(Config.APP_ENGINE+'/debug/joinResponse', {gameId: code, response: JSON.stringify(data), id: _me});
                 if (data.relay) {
+                    if (data.relay == "self") {
+                        var ws_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
+                        data.relay = window.location.port != '' ? ws_protocol+window.location.hostname+":"+window.location.port : ws_protocol+window.location.hostname;
+                    }
                     _socket.connect(data.relay);
                     _socket.emit('join_game', {code: code, scrn: RacerDevice.getScreen(), agent: Data.DEVICE.getDevice(), name: Utils.cookie('player_name'), id: _me, webaudio: Device.system.webaudio});
                     
@@ -467,6 +471,10 @@ Class(function SocketModel() {
         if (Config.USE_WEBSOCKETS) {
             XHR.get(Config.APP_ENGINE+'/control/join', {gameId: code}, function(data) {
                 if (data.relay) {
+                    if (data.relay == "self") {
+                        var ws_protocol = window.location.protocol == "https:" ? "wss://" : "ws://";
+                        data.relay = window.location.port != '' ? ws_protocol+window.location.hostname+":"+window.location.port : ws_protocol+window.location.hostname;
+                    }
                     _socket.connect(data.relay);
                     _socket.emit('watch_game', {code: code, id: _me});
                     

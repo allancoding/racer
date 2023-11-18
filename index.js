@@ -31,8 +31,8 @@ app.use("/racer", express.static("client"));
 app.get("/control/start", (req, res) => {
     res.send({
         gameId: 123456,
-        relays: ['self','ws://localhost:3000'],
-        secureRelays: ['self','wss://localhost:3000'],
+        relays: ['self'],
+        secureRelays: ['self'],
     });
 });
 app.post("/control/register", (req, res) => {
