@@ -1,0 +1,11 @@
+connect_player
+connect_table
+force_disconnect
+player_removed_response
+remove_player
+hardware_update
+force_restart
+---------------------------------
+end_session
+player_removed
+table_game_starting
