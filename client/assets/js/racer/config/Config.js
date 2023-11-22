@@ -10,7 +10,7 @@ Class(function Config() {
   this.LINK = "example.com/racer";
 
   if (window.location.hash.strpos("forcemobile")) {
-    this.DISABLE_SOUNDS = false;
+    this.DISABLE_SOUNDS = true;
     this.FORCE_MOBILE = true;
   }
 
