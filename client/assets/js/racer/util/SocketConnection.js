@@ -142,7 +142,7 @@ Class(function SocketConnection() {
     }
     
     this.connect = function(server) {
-        if (_secure && server) server = server.replace(':80/socket', ':443/wss').replace('ws://', 'wss://');
+        if (_secure && server) server = server.replace(':80/socket', ':443/wss');
         if (server) initSocket(server);
         clearInterval(_pulseInter);
         _pulseInter = setInterval(function() {

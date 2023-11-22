@@ -15,7 +15,7 @@ Class(function Config() {
   }
 
   this.GAME = {
-    laps: 9,
+    laps: 5,
     canFinish: true,
     threshold: 25,
     overlap: 50,
@@ -112,10 +112,10 @@ Class(function Config() {
     "assets/images/lineup/you-triangle-dark.png",
     "assets/images/lineup/you-triangle.png",
   ];
-
-  this.APP_ENGINE = window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname;
-  this.PATH = window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname+"/racer/";
-  this.SOCKET_SERVER = window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname;
+  var temppath = window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname;
+  this.APP_ENGINE = temppath;
+  this.PATH = temppath+"/racer/";
+  this.SOCKET_SERVER = temppath;
   this.URL = this.LINK || this.APP_ENGINE;
 
   this.PRESENTATION = (function () {

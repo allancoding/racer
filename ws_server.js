@@ -82,6 +82,22 @@ module.exports = function (server, mem) {
                 code: req.code
             };
         },
+        watch_game(req, ws) {
+            mem.addWatcherToRace(req.code, ws);
+            let race = mem.getRace(req.code);
+
+            if (race) {
+                race = mem.getRace(req.code);
+                race._socketio_type = "watch_game_response";
+                race.success = true;
+                return race;
+            }
+            return {
+                _socketio_type: "watch_game_response",
+                success: false,
+                code: req.code
+            };
+        },
         exit_lobby(req) {
             let race = mem.getRace(req.code);
             if (race) {

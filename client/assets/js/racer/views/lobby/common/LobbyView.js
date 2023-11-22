@@ -43,8 +43,8 @@ Class(function LobbyView(_data) {
     function initText() {
         $text = $('.text');
         $text.fontStyle('AvantGarde', 12, '#fff');
-        $text.css({ opacity: 0, width: 300, height: 100, paddingTop: 2, overflow: 'visible', whiteSpace: 'nowrap', webkitBackfaceVisibility: 'hidden', textAlign: 'left', position: 'relative', margin: '2px auto 0 auto' });
-        $text.text('FRIENDS CAN JOIN AT<br><strong>'+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong><br/>BY ENTERING THIS RACE CODE:');
+        $text.css({ opacity: 0, width: 300, height: 200, paddingBottom: 25, paddingTop: 2, overflow: 'visible', whiteSpace: 'nowrap', webkitBackfaceVisibility: 'hidden', textAlign: 'left', position: 'relative', margin: '2px auto 0 auto' });
+        $text.text('FRIENDS CAN JOIN AT<br><strong>'+Config.URL+'</strong><br/>BY ENTERING THIS RACE CODE:');
         $text.invisible();
         $this.addChild($text);
         
@@ -72,10 +72,10 @@ Class(function LobbyView(_data) {
         
         if (RacerDevice.mobile) {
             $results.text('THE RESULTS');
-            $text.text('NEW RACERS CAN JOIN AT<br><strong>'+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong>');
+            $text.text('NEW RACERS CAN JOIN AT<br><strong>'+Config.URL+'</strong>');
         } else {
             $results.text('THE RACERS');
-            $text.text('CHALLENGERS CAN JOIN AT<br><strong>'+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong>');    
+            $text.text('CHALLENGERS CAN JOIN AT<br><strong>'+Config.URL+'</strong>');    
         }
     }
     
@@ -272,7 +272,7 @@ Class(function LobbyView(_data) {
             if (_players) $this.addChild(_players);
             if ($buttons) $this.addChild($buttons);
         } else {
-            $results.text('CHALLENGERS CAN JOIN AT<br><strong>'+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong>');
+            $results.text('CHALLENGERS CAN JOIN AT<br><strong>'+Config.URL+'</strong>');
             $text.text('THE RACERS');    
         }
         resizeHandler();
@@ -356,10 +356,10 @@ Class(function LobbyView(_data) {
                     if (!_this.watcher && !Global.RESULTS) $text.text('THE LOBBY IS NOW FULL<br/>GET '+e.players[0].name+' TO START THE GAME');
                 } else {
                     var left = 5-e.players.length;
-                    if (!_this.watcher && !Global.RESULTS) $text.text('FRIENDS CAN JOIN AT<br><strong>'+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong><br/>BY ENTERING THIS RACE CODE:');
+                    if (!_this.watcher && !Global.RESULTS) $text.text('FRIENDS CAN JOIN AT<br><strong>'+Config.URL+'</strong><br/>BY ENTERING THIS RACE CODE:');
                 }
             } else {
-                if (_setCode && !_this.watcher && !Global.RESULTS) $text.text('FRIENDS CAN JOIN AT<br><strong>'+(window.location.port != '' ? window.location.protocol+"//"+window.location.hostname+":"+window.location.port : window.location.protocol+"//"+window.location.hostname)+'/racer</strong><br/>BY ENTERING THIS RACE CODE:');
+                if (_setCode && !_this.watcher && !Global.RESULTS) $text.text('FRIENDS CAN JOIN AT<br><strong>'+Config.URL+'</strong><br/>BY ENTERING THIS RACE CODE:');
             }
         }
     }

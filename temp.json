@@ -1,0 +1,49 @@
+{
+  "FKVJK": {
+    "players": [
+      {
+        "id": "37404383090",
+        "agent": {
+          "title": "DEFAULT",
+          "perma": "samsung-galaxy-tab-2",
+          "imgwidth": "155",
+          "imgheight": "252",
+          "id": "16"
+        },
+        "scrn": {
+          "w": 544,
+          "h": 604
+        },
+        "color": 0,
+        "webaudio": true,
+        "name": "KNM"
+      },
+      {
+        "id": "40273363837",
+        "agent": {
+          "title": "DEFAULT",
+          "perma": "samsung-galaxy-tab-2",
+          "imgwidth": "155",
+          "imgheight": "252",
+          "id": "16"
+        },
+        "scrn": {
+          "w": 412,
+          "h": 777
+        },
+        "color": 1,
+        "webaudio": true,
+        "name": "NIG"
+      }
+    ],
+    "watchers": [],
+    "playing": false,
+    "track": "SIMPLE",
+    "tracksReady": 1,
+    "playersReady": 0,
+    "readySetGo": 0,
+    "finished": [],
+    "_socketio_type": "join_game_response",
+    "success": true
+  }
+}

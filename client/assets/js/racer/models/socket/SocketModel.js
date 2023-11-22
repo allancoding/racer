@@ -249,6 +249,7 @@ Class(function SocketModel() {
     function watchGameResponse(e) {
         if (e.code) _code = e.code;
         if (e.track) Data.TRACK.setType(e.track);
+        console.log(e);
         Global.PLAYER_INDEX = -1;
         _this.events.fire(RacerEvents.UPDATE_PLAYERS, {players: e.players});
         callback('watch_game', e);

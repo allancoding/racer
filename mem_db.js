@@ -32,6 +32,13 @@ module.exports = {
         this.sockets[code].push(socket);
         return true;
     },
+    addWatcherToRace(code, socket) {
+        if (!this.races[code]) {
+            return false;
+        }
+        this.sockets[code].push(socket);
+        return true;
+    },
     editPlayerName(code, player, name) {
         if (!this.races[code]) {
             return false;
