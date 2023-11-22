@@ -27,7 +27,7 @@ Class(function RacerUtil() {
     function debugListeners() {
         if (Config.DEVELOPMENT) {
             __window.keypress(function(e) {
-               if (e.keyCode == 96) _this.events.fire(RacerEvents.DEBUG_DUMP);
+               if (e.keyCode == 191) _this.events.fire(RacerEvents.DEBUG_DUMP);
                if (Global.TABLE_DEBUG) Data.SOCKET.forceRestart();
             });
             

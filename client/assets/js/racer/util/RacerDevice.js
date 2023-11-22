@@ -171,9 +171,9 @@ Class(function RacerDevice() {
       if (touch.y < 75) return false;
     });
 
-    /*window.addEventListener('touchstart', function() {
-            if (Mobile.os == 'Android' && !Device.getFullscreen()) Device.openFullscreen();
-        });*/
+    window.addEventListener('touchstart', function() {
+      if (Mobile.os == 'Android' && !Device.getFullscreen()) Device.openFullscreen();
+    });
   };
 
   this.fullscreen = function () {

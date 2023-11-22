@@ -83,26 +83,23 @@ module.exports = function (server, mem) {
             };
         },
         watch_game(req, ws) {
-            mem.addWatcherToRace(req.code, ws);
+            mem.addWatcherToRace(req.code, req.id, ws);
             let race = mem.getRace(req.code);
-
+            
             if (race) {
                 race = mem.getRace(req.code);
                 race._socketio_type = "watch_game_response";
                 race.success = true;
+                race.code = req.code;
                 return race;
             }
             return {
                 _socketio_type: "watch_game_response",
-                success: false,
-                code: req.code
+                success: false
             };
+            
         },
-        exit_lobby(req) {
-            let race = mem.getRace(req.code);
-            if (race) {
-                // Remove
-            }
+        exit_lobby() {
             return {
                 _socketio_type: "force_restart_all"
             };
@@ -239,7 +236,7 @@ module.exports = function (server, mem) {
                 });
             }
             return {};
-        }
+        },
     };
 
     wss.on("connection", ws => {
