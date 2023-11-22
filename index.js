@@ -22,8 +22,9 @@ if (config.https == true) {
     server = http.createServer(app);
 }
 const wss = require("./ws_server.js")(server, mem);
-app.use(require("morgan")("dev"));
+//app.use(require("morgan")("dev")); #uncomment for logging
 app.use(require("cors")());
+app.use(express.json());
 app.get('/', (req, res) => {
     res.redirect('/racer');
 });
@@ -43,6 +44,15 @@ app.get("/control/join", (req, res) => {
         relay: 'self',
     });
 });
+//app.post("/debug/join", (req, res) => {
+//    res.send({success: true});
+//});
+//app.post("/debug/joinResponse", (req, res) => {
+//    res.send({success: true});
+//});
+//app.post("/debug/relayResponse", (req, res) => {
+//    res.send({success: true});
+//});
 server.listen(config.port, () => {
     console.log(`Racer server listening on port ${config.port}`)
 });

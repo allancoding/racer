@@ -102,7 +102,30 @@ Class(function RacerDevice() {
       if (_timeout) clearTimeout(_timeout);
       _timeout = setTimeout(resizeHandler, 100);
     });
+    document.addEventListener('visibilitychange', async () => {
+      if (document.visibilityState === 'visible') {
+        await requestWakeLock();
+      } else if (this.wakeLock && typeof this.wakeLock.release === 'function' && document.visibilityState === 'hidden') {
+        await this.wakeLock.release();
+        this.wakeLock = null;
+      }
+    });
+    (async () => {
+      await requestWakeLock();
+    })();
   }
+
+  const requestWakeLock = async () => {
+    try {
+      this.wakeLock = await navigator.wakeLock.request('screen');
+      this.wakeLock.addEventListener('release', () => {
+        console.log('Wake Lock was released');
+      });
+      console.log('Wake Lock is active');
+    } catch (err) {
+      console.error(`${err.name}, ${err.message}`);
+    }
+  };
 
   function refreshPage() {
     var $overlay = $(".overlay");
@@ -192,7 +215,7 @@ Class(function RacerDevice() {
   };
 
   this.inputFocus = function () {
-    //console.log('focus');
-    //$input.div.focus();
+    console.log('focus');
+    $input.div.focus();
   };
 }, "Static");

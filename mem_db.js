@@ -7,7 +7,6 @@ module.exports = {
         }
         this.races[code] = {
             players: [],
-            watchers: [],
             playing: false,
             track: "",
             tracksReady: 0,
@@ -37,9 +36,6 @@ module.exports = {
         if (!this.races[code]) {
             return false;
         }
-        this.races[code].watchers.push({
-            id
-        });
         this.sockets[code].push(socket);
         return true;
     },

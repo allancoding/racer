@@ -1,4 +1,6 @@
 const { Server } = require("ws");
+const readline = require('readline');
+const fs = require('fs');
 
 function generateCode(){
     let random_string = '';
@@ -83,7 +85,6 @@ module.exports = function (server, mem) {
             };
         },
         watch_game(req, ws) {
-            mem.addWatcherToRace(req.code, req.id, ws);
             let race = mem.getRace(req.code);
             
             if (race) {
@@ -236,8 +237,25 @@ module.exports = function (server, mem) {
                 });
             }
             return {};
-        },
+        }
     };
+
+    readline.emitKeypressEvents(process.stdin);
+    if (process.stdin.isTTY)
+        process.stdin.setRawMode(true);
+
+    process.stdin.on('keypress', (chunk, key) => {
+    if (key && key.name == 's') {
+        console.log(mem.sockets);
+    } else if (key && key.name == 'd') {
+        fs.writeFile('temp.json', JSON.stringify(mem.races, null, 2), (err) => {
+            if (err) throw err;
+            console.log('Data written to file');
+        });
+    } else if (key && key.name == 'q') {
+        process.exit();
+    }
+    });
 
     wss.on("connection", ws => {
         console.log("Connected");
